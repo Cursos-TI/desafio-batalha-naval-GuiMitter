@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 //definido constantes 
-#define LINHAS 10
-#define COLUNAS 10
 
 // Desafio Batalha Naval - MateCheck
-
+    #define LINHAS 10
+#define COLUNAS  10
 
 int main()
 {
+
+int TAMANHONAVIO = 3;
+
 
     int tabuleiro[LINHAS][COLUNAS];
     for (int i = 0; i < LINHAS; i++)
@@ -21,6 +23,8 @@ int main()
         }
        
     }
+
+
 
     //Vertical ou horizontal
     //navio 1 
@@ -44,6 +48,18 @@ int main()
     tabuleiro[8][8]= 3;
     tabuleiro[7][7]= 3;
 
+
+
+    //navio 5
+    for (int i = 0; i < TAMANHONAVIO; i++) {
+    int linhaInicial = 2;
+    int colunaInicial = 4;
+
+    tabuleiro[linhaInicial + i][colunaInicial - i] = 3;
+}
+
+    
+
     for (int i = 0; i < LINHAS; i++)
     {
         for (int j = 0; j < COLUNAS; j++)
@@ -55,12 +71,18 @@ int main()
         printf("\n");
     }
 
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
 
-    // Nível Mestre - Habilidades Especiais com Matrizes
+
+
+
+
+
+
+
+
+    
+
+       // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
     // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
